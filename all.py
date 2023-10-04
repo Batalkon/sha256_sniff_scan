@@ -5,7 +5,8 @@ my_name = "YourName"
 
 def hmac_sha256(key, message):
     hashed_key = hashlib.sha256(key.encode()).digest()
-    hmac_hash = hmac.new(hashed_key, message.encode(), hashlib.sha256).digest()
+    hmac_hash = hmac.new(hashed_key, message.encode(),
+    hashlib.sha256).digest()
     return hmac_hash.hex()
 
 # Список целевых IP-адресов для сканирования открытых портов
