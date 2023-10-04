@@ -18,7 +18,7 @@ bpf_filter = "tcp[tcpflags] & tcp-syn != 0"
 def packet_handler(packet):
     print("Detected TCP SYN packet:", packet.summary())
 
-# Вычисление HMAC для каждого целевого IP-адреса и отправка на сканирование открытых портов
+# Вычисление HMAC для каждого целевого IP и сендинг на скан опен портов
 for target in targets:
     print(f"HMAC for {my_name}:", hmac_sha256(my_name, target))
 
